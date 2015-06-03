@@ -11,7 +11,7 @@
 ##Synopsis
 This script was created to help with the annoying problem of Margin of Error tracking when manipulating data from the U.S. Census Bureau's American Communities Survey (ACS).  Under guidance from U.S. Census Bureau documentation and epidemiologists at Ramsey County, I developed this script to deal with combining large numbers of variables which have an estimated value of zero.  Adding a lot of zeros causes problems with margins of error on the ACS.  This tool solves that problem.
 
-This tool also aids in the workflow I used while conducting the Climate Change Vulnerability Assessment (CCVA) at Ramsey County.  After selecting the data you want to combine, it does all the math and creates 5 new fields in a feature of your choice if you select the normalized option (2 if you don't) – one for each new value from the resulting math.  It also creates two new raster files if you use the normalized option, one new raster if you don't.  These new rasters are then open for manipulation in ArcGIS Model Builder.  The second raster is created so that the user can work with integers rather than floats, and contains exactly the same values as the first raster except they are multiplied by 1,000,000 and made integers.
+This tool also aids in the workflow I used while conducting the Climate Change Vulnerability Assessment (CCVA) at Ramsey County.  After selecting the data you want to combine, it does all the math and creates 5 new fields in a feature of your choice – one for each new value from the resulting math.  Fields "ef1" and "ef5" are then made into rasters for use with the assessment tools I created with ArcGIS Model Builder.
 
 ##Details
 ####Custom Functions
