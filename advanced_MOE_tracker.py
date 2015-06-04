@@ -233,7 +233,7 @@ with arcpy.da.UpdateCursor(out_data, ef2) as uCursor:
 ef3Values = []
 with arcpy.da.SearchCursor(in_data, n_field) as sCursor:
     r = 0
-    for row in sCursor:
+    for row in sCursor: 
         den = row[0]  # Value of normalize field
         num = ef1Values[r]  # Value of ef1
         nVal = None
@@ -264,7 +264,7 @@ with arcpy.da.SearchCursor(in_data, ef4Fields) as sCursor:
     for row in sCursor:
         chk = [row[0], row[1], ef3Values[r]]
         nullFlag = False
-        for val in chk:
+        for val in chk: # Make sure we don't divide by zero
             if val is None:
                 nullFlag = True
                 break
@@ -317,7 +317,7 @@ with arcpy.da.UpdateCursor(out_data, ef4) as uCursor:
 ef5Values = []
 for val in ef3Values:
     if val is not None:
-        e = long(val * 1000000)
+        e = long(val * 1000000) # Save the float out 6 places as an integer for raster creation
     else:
         e = val
     ef5Values.append(e)
@@ -337,6 +337,7 @@ del sCursor
 #####
 
 newVarReport = []  # Will hold each line of the report for writing to CSV
+## Set default out_report path
 if out_report == '':
     cwd = os.getcwd()
     (t_dir, s_dir) = os.path.split(cwd)
