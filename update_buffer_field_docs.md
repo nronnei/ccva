@@ -1,8 +1,11 @@
 #Update Buffer Field
 ##Metadata
 *Tool Name:*  update_buffer_field.py
+
 *Tool Type:*  standalone script
+
 *Tool Author:*  Nicholas Ronnei (nronnei@gmail.com) 
+
 *Created for use on the Ramsey County Climate Change Vulnerability Assessment*
 
 ##Synopsis
